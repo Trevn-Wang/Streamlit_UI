@@ -83,34 +83,6 @@ pipeline {
                 }
             }
         }
-        stage('SIL Phase') {
-            parallel{
-                stage('SIL'){
-                    stages{
-                        stage('SIL Preparation') {
-                            steps {
-                                echo 'SIL Preparation'
-                            }
-                        }
-                        stage('SIL Building') {
-                            steps {
-                                echo 'SIL Building'
-                            }
-                        }
-                        stage('SIL Review Request') {
-                            steps {
-                                echo 'SIL Review Requestp'
-                            }
-                        }
-                        stage('SIL RTC Delivery') {
-                            steps {
-                                echo 'RTC Delivery'
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
     post {
         always {
